@@ -1,0 +1,51 @@
+#include <iostream>
+using namespace std;
+
+float add (float x,float y)
+{
+    return (x+y);
+}
+int remainder (int x,int y)
+{
+    return (x%y);
+}
+float sub (float x,float y)
+{
+    return (x-y);
+}
+
+float mul (float x,float y)
+{
+    return (x*y);
+}
+
+float divide (float x,float y)
+{
+    return (x/y);
+}
+
+int main()
+{
+    cout<< "****welcome to my calculator****"<<endl;
+     float n1,n2,answer;
+  while (true)
+   {cout<<"ENTER FIRST NUMBER"<<endl;
+   cin>>n1 ;
+   cout<<"ENTER SECOND NUMBER"<<endl;
+   cin>>n2;
+
+   cout<<"PRESS A FOR ADDITION,S FOR SUBTRACTION,M FOR MULTIPLICATION,D FOR DIVISON,R for modulus"<<endl;
+   char input;
+   cin>>input;
+   if (input=='A'||input=='a') answer= add(n1,n2);
+   if (input=='S'||input=='s') answer=sub(n1,n2);
+   if (input=='M'||input=='m') answer=mul(n1,n2);
+   if (input=='D'||input=='d') answer=divide(n1,n2);
+   if (input=='R'||input=='r') answer=remainder(n1,n2);
+   cout<<"YOUR ANSWER IS " << answer<<endl;
+   cout<<" PRESS ENTER KEY TO CONTINUE.....PRESS Q TO QUIT"<<endl;
+   cin>>input;
+   if (input=='Q'||input=='q') break;
+   }  
+   
+}
